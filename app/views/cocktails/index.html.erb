@@ -1,8 +1,20 @@
-<h1>List of all cocktails</h1>
-  <ul>
-    <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail[:id]) %></li>
-    <% end %>
-  </ul>
+<div class="banner">
+  <div class="banner-text">
+    <h1>Take a break</h1>
+    <h1>Drink a cocktail</h1>
+  </div>
+</div>
+<div class="home-text">
+  <h2>List of all cocktails</h2>
+    <ul>
+      <% @cocktails.each do |cocktail| %>
+      <li><%= link_to cocktail.name, cocktail_path(cocktail[:id]) %>
+        <%= link_to "🗑️", cocktail_path(cocktail[:id]),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" }%></li>
+      <% end %>
+    </ul>
 
-<p><%= link_to "Create a new cocktail", new_cocktail_path %></p>
+  <p><%= link_to "Create a new cocktail", new_cocktail_path %></p>
+</div>
+
