@@ -9,7 +9,8 @@ body {
 }
 
 h2 {
-  color: #00acb2;
+  // color: #00acb2;
+  color: #78CAD2;
 }
 
 h4 {
@@ -20,6 +21,7 @@ h4 {
 #home-picture-box {
   display: grid;
   height: 100%;
+  position: relative;
 }
 
 #home-picture {
@@ -27,7 +29,6 @@ h4 {
   max-width: 100%;
   max-height: 100vh;
   margin: auto;
-  position: relative;
 }
 
 #home-text {
