@@ -45,6 +45,7 @@ h4 {
 // Styling Home Content
 .content-home-box {
   height: 100%;
+  margin-top: 50px;
 }
 
 .content-home {
@@ -54,5 +55,29 @@ h4 {
   font-family: 'Anonymous Pro', monospace;
   h2 {
     font-family: 'Raleway';
+  }
+}
+
+// Styling squares with text
+.text-cube-box {
+  padding: 40px;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+// Styling squres with pictures
+
+.cocktail-cube {
+  padding: 40px;
+}
+
+// Styling link to all cocktails
+.all-cocktails {
+  margin: 35px auto;
+  text-align: center;
+  a {
+  text-decoration: none;
+  color: #DBB1BC;
   }
 }
