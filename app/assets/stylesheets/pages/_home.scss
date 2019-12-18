@@ -34,10 +34,11 @@ h4 {
   position: absolute;
   bottom: 15%;
   left: 11%;
-  // color: #78CAD2;
-  color: #DBB1BC;
-  font-family: 'Staatliches';
-  font-size: 30px;
+  h1 {
+    color: #DBB1BC;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 30px;
+  }
 }
 
 // Styling Home Content
