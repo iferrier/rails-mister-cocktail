@@ -16,19 +16,31 @@ h4 {
   color: #C3D0EB;
 }
 
-.banner {
-  background-image: url('https://res.cloudinary.com/dteopaixi/image/upload/v1573921660/c2okcbt4jkf8mbwue3ye.jpg');
-  background-size: cover;
-  height: 50vh;
-  position: relative;
-  opacity: 0.9;
+ // Styling banner
+#home-picture-box {
+  display: grid;
+  height: 100%;
 }
 
-.banner-text {
+#home-picture {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+  position: relative;
+}
+
+#home-text {
   position: absolute;
-  top: 15%;
+  bottom: 15%;
   left: 11%;
-  color: black;
-  font-family: 'Staatliches', cursive;
+  // color: #78CAD2;
+  color: #DBB1BC;
+  font-family: 'Staatliches';
   font-size: 30px;
+}
+
+// Styling Home Content
+.all-cocktails {
+  height: 100%;
 }
