@@ -12,12 +12,12 @@
     <div class="container">
       <div class="row">
         <div class="col text-cube">
-          <h2>What is Isabelle's Cocktail?</h2>
+          <h2>What is Isabelle's Cocktails?</h2>
           <p>This website is one of my projects from the coding bootcamp at Le Wagon. It has the following tech stack : Ruby on Rails, html, Bootstrap and CSS. </p>
         </div>
         <div class="col cocktail-cube">
           <% @cocktails.sample(1).each do |cocktail| %>
-            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+            <%= link_to cl_image_tag(cocktail.photo, class: 'home-card'), cocktail_path(cocktail)%>
           <% end %>
         </div>
       </div>
@@ -25,7 +25,7 @@
         <div class="row">
           <div class="col cocktail-cube">
             <% @cocktails.sample(1).each do |cocktail| %>
-              <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+              <%= link_to cl_image_tag(cocktail.photo, class: 'home-card'), cocktail_path(cocktail)%>
             <% end %>
           </div>
           <div class="col text-cube">
