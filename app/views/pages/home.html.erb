@@ -7,6 +7,33 @@
     </div>
   </div>
 </div>
+<div class="content-home">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm text-cube">
+        <h2>What is Isabelle's Cocktail?</h2>
+        <p>This website is one of my projects from the coding bootcamp at Le Wagon. The technical stack is: app with Ruby on Rails, front end with bootstrap and CSS. </p>
+      </div>
+      <div class="col-sm cocktail-cube">
+        <% @cocktails.sample(1).each do |cocktail| %>
+          <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+        <% end %>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+      <div class="col-sm cocktail-cube">
+        <% @cocktails.sample(1).each do |cocktail| %>
+          <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+        <% end %>
+      </div>
+       <div class="col-sm text-cube">
+        <h2>Can I participate?</h2>
+        <p>YES! Please feel free to add your recipes. Sharing is caring.</p>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="all-cocktails">
-  <%= render 'cocktails/index', cocktail: @cocktails %>
+  <%= link_to 'All recipes here', cocktails_path %>
 </div>
