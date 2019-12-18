@@ -4,19 +4,6 @@ body {
   background-color: white;
 }
 
-.btn {
-  color: #ffbb00;
-}
-
-h2 {
-  // color: #00acb2;
-  color: #78CAD2;
-}
-
-h4 {
-  color: #C3D0EB;
-}
-
  // Styling banner
 #home-picture-box {
   display: grid;
@@ -38,7 +25,7 @@ h4 {
   h1 {
     color: #DBB1BC;
     font-family: 'Anonymous Pro', monospace;
-    font-size: 30px;
+    font-size: 36px;
   }
 }
 
@@ -55,6 +42,11 @@ h4 {
   font-family: 'Anonymous Pro', monospace;
   h2 {
     font-family: 'Raleway';
+    color: #DBB1BC;
+    font-size: 26px;
+  }
+  p {
+    font-size: 16px;
   }
 }
 
