@@ -28,8 +28,28 @@ body {
   }
 }
 
+// styling arrow
+
+.arrow-box {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.arrow {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-top: 5px solid #DBB1BC;
+  border-right: 5px solid #DBB1BC;
+}
+
+.arrow-bottom {
+  transform: rotate(135deg);
+}
+
 // Styling Home Content
-.content-home-box {
+#content-home-box {
   height: 100%;
   margin-top: 50px;
 }
