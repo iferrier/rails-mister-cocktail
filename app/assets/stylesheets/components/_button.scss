@@ -2,8 +2,13 @@
   border: 0.5px solid #78CAD2;
   color: #78CAD2;
   padding: 25px 25px;
+  transition: 0.3s;
   a {
     text-decoration: none;
     color: #78CAD2;
   }
+}
+
+.btn:hover {
+  transition: 0.3s;
 }
