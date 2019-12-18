@@ -1,0 +1,53 @@
+<div class="banner">
+  <div id="home-picture-box">
+    <img src="https://res.cloudinary.com/dteopaixi/image/upload/v1576602673/tqgkwwgqnvdw4mhzc0ro.jpg" alt="beach" id='home-picture'>
+    <div id="home-text">
+      <h1>Take a break,</h1>
+      <h1>drink a cocktail...</h1>
+      <div class="arrow-box">
+        <a href='#content-home-box' class="arrow arrow-bottom"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="content-home-box">
+  <div class="content-home">
+    <div class="container">
+      <div class="row">
+        <div class="col text-cube-box">
+          <div class="text-cube">
+            <h2>What is Isabelle's Cocktails?</h2>
+            <p>This website is one of my projects from the coding bootcamp at Le Wagon. It has the following tech stack : Ruby on Rails, html, Bootstrap and CSS. </p>
+          </div>
+        </div>
+        <div class="col cocktail-cube">
+          <% @cocktails.sample(1).each do |cocktail| %>
+            <%= link_to cl_image_tag(cocktail.photo, class: 'home-card'), cocktail_path(cocktail)%>
+          <% end %>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col cocktail-cube">
+            <% @cocktails.sample(1).each do |cocktail| %>
+              <%= link_to cl_image_tag(cocktail.photo, class: 'home-card'), cocktail_path(cocktail)%>
+            <% end %>
+          </div>
+          <div class="col text-cube-box">
+            <div class="text-cube">
+              <h2>Can I participate?</h2>
+              <p>YES! Please feel free to add your recipes and give your opinion on the ones available. <br>Sharing is caring :)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container all-cocktails">
+      <div class="row">
+        <div class="col">
+          <%= link_to 'All cocktails here', cocktails_path,  class: 'btn' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
