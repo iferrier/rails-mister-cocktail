@@ -17,14 +17,8 @@
         </div>
       </div>
     <% end %>
+    <div class="col-sm-12 create-cocktail">
+      <p><%= link_to "Create a new cocktail", new_cocktail_path, class: 'btn' %></p>
+    </div>
   </div>
-    <ul>
-      <% @cocktails.each do |cocktail| %>
-      <li><%= link_to cocktail.name, cocktail_path(cocktail[:id]) %>
-        <%= link_to "🗑️", cocktail_path(cocktail[:id]),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" }%></li>
-      <% end %>
-    </ul>
-    <p><%= link_to "Create a new cocktail", new_cocktail_path %></p>
-  </div>
+</div>
