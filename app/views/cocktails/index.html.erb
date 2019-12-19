@@ -13,6 +13,13 @@
                 <%= link_to cocktail.name, cocktail_path(cocktail) %>
               </div>
             </div>
+          <% else %>
+            <div class="cocktail-index-image">
+              <%= link_to cl_image_tag('kobby-mendez-xBFTjrMIC0c-unsplash_dmwclv', class: 'home-card'), cocktail_path(cocktail) %>
+              <div class="cocktail-index-text">
+                <%= link_to cocktail.name, cocktail_path(cocktail) %>
+              </div>
+            </div>
           <% end %>
         </div>
       </div>
