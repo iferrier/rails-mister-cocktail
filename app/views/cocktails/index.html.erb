@@ -1,13 +1,24 @@
-<div class="home-text">
-  <h2>List of all cocktails</h2>
-    <ul>
-      <% @cocktails.each do |cocktail| %>
-      <li><%= link_to cocktail.name, cocktail_path(cocktail[:id]) %>
-        <%= link_to "🗑️", cocktail_path(cocktail[:id]),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" }%></li>
-      <% end %>
-    </ul>
-
-  <p><%= link_to "Create a new cocktail", new_cocktail_path %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10">
+      <h2>Our cocktails currently available:</h2>
+    </div>
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-sm-4">
+        <div class="cocktail-index">
+          <% if cocktail.photo.present? %>
+            <div class="cocktail-index-image">
+              <%= link_to cl_image_tag(cocktail.photo, class: 'home-card'), cocktail_path(cocktail) %>
+              <div class="cocktail-index-text">
+                <%= link_to cocktail.name, cocktail_path(cocktail) %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+    <div class="col-sm-12 create-cocktail">
+      <p><%= link_to "Create a new cocktail", new_cocktail_path, class: 'btn' %></p>
+    </div>
+  </div>
 </div>

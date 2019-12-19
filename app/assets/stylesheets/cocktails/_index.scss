@@ -1,0 +1,31 @@
+h2 {
+  color: $beige;
+}
+
+// Design card index
+.cocktail-index-image {
+  position: relative;
+  opacity: 0.7;
+  margin: 15px;
+}
+
+.cocktail-index-text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 2%;
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+// Button Create Cocktail
+.create-cocktail {
+  text-align: center;
+  margin: 25px;
+}

@@ -23,7 +23,7 @@ body {
   bottom: 10%;
   left: 11%;
   h1 {
-    color: #DBB1BC;
+    color: $beige;
     font-size: 36px;
   }
 }
@@ -40,8 +40,8 @@ body {
   display: inline-block;
   width: 15px;
   height: 15px;
-  border-top: 5px solid #DBB1BC;
-  border-right: 5px solid #DBB1BC;
+  border-top: 5px solid $beige;
+  border-right: 5px solid $beige;
 }
 
 .arrow-bottom {
@@ -59,7 +59,7 @@ body {
   height: 100vh;
   margin: auto;
   h2 {
-    color: #DBB1BC;
+    color: $beige;
     font-size: 26px;
   }
   p {
