@@ -7,7 +7,7 @@
           <%= cl_image_tag @cocktail.photo, crop: :fill, class: 'show-card' %>
           <% else %>
         <% end %>
-
+        <div class="cocktail-description">
         <h1><%= @cocktail.name %></h1>
 
         <p>Add the ingredients and follow the instructions:</p>
@@ -24,6 +24,7 @@
                     method: :delete,
                     data: { confirm: "Are you sure?" } %></p>
         <p><%= link_to "Back to all cocktails", cocktails_path %></p>
+        </div>
     </div>
   </div>
 </div>

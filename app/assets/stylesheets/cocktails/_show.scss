@@ -7,6 +7,7 @@ h1 {
   width: 15px;
 }
 
+// Center Cocktail elements within the page
 .cocktail-box {
   display: flex;
   justify-content: space-around;
@@ -15,6 +16,12 @@ h1 {
 .cocktail-box-overview {
   display: flex;
   justify-content: space-around;
+}
+
+// Design display of elements of the cocktail
+
+.cocktail-description {
+  padding: 0 30px;
 }
 
 .ingredient {
