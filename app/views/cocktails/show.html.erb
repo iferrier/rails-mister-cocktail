@@ -1,3 +1,4 @@
+<%= render 'shared/navbar' %>
 <%  if @cocktail.photo.present? %>
   <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
   <% else %>
