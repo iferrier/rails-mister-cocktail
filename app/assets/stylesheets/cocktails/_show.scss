@@ -16,3 +16,9 @@ h1 {
   display: flex;
   justify-content: space-around;
 }
+
+.ingredient {
+  max-width: 350px;
+  text-align: justify;
+  text-justify: inter-word;
+}
