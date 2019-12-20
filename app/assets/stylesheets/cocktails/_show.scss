@@ -1,0 +1,44 @@
+h1 {
+  color: $beige;
+}
+
+.delete-icon {
+  height: 15px;
+  width: 15px;
+}
+
+// Center Cocktail elements within the page
+.cocktail-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cocktail-box-overview {
+  display: flex;
+  justify-content: space-around;
+}
+
+// Design display of elements of the cocktail
+
+.cocktail-description {
+  padding: 0 30px;
+}
+
+.ingredient {
+  max-width: 350px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+// Design buttons
+.cocktail-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
+.back-button {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}

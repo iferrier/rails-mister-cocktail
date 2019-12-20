@@ -1,19 +1,40 @@
-<%  if @cocktail.photo.present? %>
-  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-  <% else %>
-<!-- standard picture -->
-<% end %>
-
-<h1><%= @cocktail.name %></h1>
-
-<p>The ingredients are:</p>
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-  <li><%= dose.ingredient.name %>
-  <%= link_to "🗑️", dose_path(dose),
-            method: :delete,
-            data: { confirm: "Are you sure?" }%></li>
-  <% end  %>
-</ul>
-<p><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail[:id]) %></p>
-<p><%= link_to "Back to List", cocktails_path %></p>
+<%= render 'shared/navbar' %>
+<div class="container">
+  <div class="cocktail-box">
+    <div class="row ">
+      <div class="cocktail-box-overview">
+        <div class="col-lg-10">
+          <div class="cocktail-box-item">
+            <%  if @cocktail.photo.present? %>
+              <%= cl_image_tag @cocktail.photo, crop: :fill, class: 'show-card' %>
+              <% else %>
+              <%= cl_image_tag('kobby-mendez-xBFTjrMIC0c-unsplash_dmwclv', crop: :fill, class: 'show-card') %>
+            <% end %>
+            <div class="cocktail-description">
+              <h1><%= @cocktail.name %></h1>
+              <p>Add the ingredients and follow the instructions:</p>
+              <ul>
+                <% @cocktail.doses.each do |dose| %>
+                <li class='ingredient'><%= dose.ingredient.name %> (<%= dose.amount %>) : <%= dose.description %>
+                <%= link_to cl_image_tag('icon_delete_w56ihn', class: 'delete-icon'), dose_path(dose),
+                          method: :delete,
+                          data: { confirm: "Are you sure to delete this ingredient?" }%></li>
+                <% end  %>
+              </ul>
+              <div class="cocktail-button">
+                <p><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: 'btn-cocktail' %></p>
+                <p><%= link_to "Delete this cocktail", cocktail_path(@cocktail),
+                            method: :delete,
+                            data: { confirm: "Are you sure?" },
+                            class: 'btn-cocktail' %></p>
+              </div>
+              <div class="back-button">
+                <p><%= link_to "Back to all cocktails", cocktails_path, class: 'btn' %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
