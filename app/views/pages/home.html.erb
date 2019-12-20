@@ -22,7 +22,11 @@
         </div>
         <div class="col cocktail-cube">
           <% @cocktails.sample(1).each do |cocktail| %>
-            <%= link_to cl_image_tag(cocktail.photo, class: 'home-card'), cocktail_path(cocktail)%>
+            <% if cocktail.photo.present? %>
+              <%= link_to cl_image_tag(cocktail.photo, class: 'home-card'), cocktail_path(cocktail)%>
+            <% else %>
+              <%= link_to cl_image_tag('kobby-mendez-xBFTjrMIC0c-unsplash_dmwclv', class: 'home-card'), cocktail_path(cocktail) %>
+            <% end %>
           <% end %>
         </div>
       </div>
