@@ -1,11 +1,11 @@
 .btn {
   border: 0.5px solid $turkis;
-  color: #78CAD2;
+  color: $turkis;
   padding: 25px 25px;
   transition: 0.3s;
   a {
     text-decoration: none;
-    color: #78CAD2;
+    color: $turkis;
   }
 }
 
