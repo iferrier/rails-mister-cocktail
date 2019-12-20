@@ -31,7 +31,13 @@ h1 {
 }
 
 // Design buttons
-.cocktail-btn {
+.cocktail-button {
   display: flex;
   justify-content: space-between;
+}
+
+.back-button {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
 }
