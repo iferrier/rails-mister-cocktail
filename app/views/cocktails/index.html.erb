@@ -1,3 +1,4 @@
+<%= render 'shared/navbar' %>
 <div class="container">
   <div class="row">
     <div class="col-sm-10">
@@ -21,12 +22,7 @@
               </div>
             </div>
           <% end %>
+        </div>
       </div>
-    </div>
-
     <% end %>
-    <div class="col-sm-12 create-cocktail">
-      <p><%= link_to "Create a new cocktail", new_cocktail_path, class: 'btn' %></p>
-    </div>
-  </div>
 </div>
