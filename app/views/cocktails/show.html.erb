@@ -1,20 +1,26 @@
 <%= render 'shared/navbar' %>
-<%  if @cocktail.photo.present? %>
-  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-  <% else %>
-<!-- standard picture -->
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <%  if @cocktail.photo.present? %>
+        <%= cl_image_tag @cocktail.photo, crop: :fill, class: 'show-card' %>
+        <% else %>
+      <!-- standard picture -->
+      <% end %>
 
-<h1><%= @cocktail.name %></h1>
+      <h1><%= @cocktail.name %></h1>
 
-<p>The ingredients are:</p>
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-  <li><%= dose.ingredient.name %>
-  <%= link_to "🗑️", dose_path(dose),
-            method: :delete,
-            data: { confirm: "Are you sure?" }%></li>
-  <% end  %>
-</ul>
-<p><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail[:id]) %></p>
-<p><%= link_to "Back to List", cocktails_path %></p>
+      <p>The ingredients are:</p>
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+        <li><%= dose.ingredient.name %>
+        <%= link_to "🗑️", dose_path(dose),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" }%></li>
+        <% end  %>
+      </ul>
+      <p><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail[:id]) %></p>
+      <p><%= link_to "Back to List", cocktails_path %></p>
+    </div>
+  </div>
+</div>
