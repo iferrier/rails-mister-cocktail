@@ -6,6 +6,7 @@
         <%  if @cocktail.photo.present? %>
           <%= cl_image_tag @cocktail.photo, crop: :fill, class: 'show-card' %>
           <% else %>
+          <%= cl_image_tag('kobby-mendez-xBFTjrMIC0c-unsplash_dmwclv', crop: :fill, class: 'show-card') %>
         <% end %>
         <div class="cocktail-description">
           <h1><%= @cocktail.name %></h1>
