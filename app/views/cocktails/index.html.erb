@@ -4,6 +4,9 @@
     <div class="col-sm-10">
       <h2>Our cocktails currently available:</h2>
     </div>
+    <% if @cocktails.empty? %>
+      <p>There are no cocktails yet.</p>
+    <% end %>
     <% @cocktails.each do |cocktail| %>
       <div class="col-sm-4">
         <div class="cocktail-index">
