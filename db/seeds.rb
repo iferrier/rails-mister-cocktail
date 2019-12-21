@@ -1,10 +1,13 @@
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "Creme de Cassis")
-Ingredient.create(name: "Ale")
-Ingredient.create(name: "Scotch")
-Ingredient.create(name: "Orange bitters")
-Cocktail.create(name:"Moscow Mule")
-Cocktail.create(name:"Gin Basil Smash")
-Dose.create(id_cocktails:"1", id_ingredients:"1")
+require 'open-uri'
+require 'json'
+
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+file = open(url).read
+document = JSON.parse(file)
+puts 'Opening the database and creating ingredients...'
+
+list = document['drinks']
+list.each do |element|
+  Ingredient.create(name: element['strIngredient1'])
+end
+puts 'Finished!'
