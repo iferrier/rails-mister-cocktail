@@ -1,12 +1,13 @@
+<%= render 'shared/navbar' %>
 <div class="container">
-  <h1>Create your new cocktail here :)</h1>
+  <h1>Create your cocktail here!</h1>
 
   <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name %>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit "Create" , class: 'btn btn-info' %>
+  <%= f.button :submit, label: "Create", wrapper_html: { class: 'btn-cocktail' } %>
   <% end %>
   <br>
-  <p><%= link_to "Back to List", cocktails_path %></p>
+  <p><%= link_to "Back to All Cocktails", cocktails_path, class: 'btn' %></p>
 </div>
