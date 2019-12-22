@@ -15,7 +15,7 @@
               <p>Add the ingredients and follow the instructions:</p>
               <ul>
                 <% @cocktail.doses.each do |dose| %>
-                <li class='ingredient'><%= dose.ingredient.name %> (<%= dose.amount %>) : <%= dose.description %>
+                <li class='ingredient'><%= dose.ingredient.name %> : <%= dose.description %>
                 <%= link_to cl_image_tag('icon_delete_w56ihn', class: 'delete-icon'), dose_path(dose),
                           method: :delete,
                           data: { confirm: "Are you sure to delete this ingredient?" }%></li>

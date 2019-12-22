@@ -21,6 +21,7 @@
   color: $purple;
   // text-decoration: underline;
   background-color: white;
+  border: none;
 }
 
 .btn-cocktail:hover {
@@ -28,3 +29,7 @@
   color: $purple;
 }
 
+// Back Button at create cocktail and add ingredient
+.back-btn {
+  margin: 25px 0;
+}
