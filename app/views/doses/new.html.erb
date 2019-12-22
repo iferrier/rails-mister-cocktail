@@ -1,9 +1,10 @@
+<%= render 'shared/navbar' %>
 <div class="container">
   <h1>Add ingredients to your <%= @cocktail.name %> here</h1>
   <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.association :ingredient %>
     <%= f.input :amount %>
     <%= f.input :description %>
-    <%= f.submit "Add the ingredient", class: "btn btn-info" %>
+    <%= f.submit "Add the ingredient", class: "btn-cocktail" %>
   <% end %>
 </div>
