@@ -6,7 +6,7 @@ file = open(url).read
 document = JSON.parse(file)
 puts 'Opening the database and creating ingredients...'
 
-list = document['drinks'].sort
+list = document['drinks']
 list.each do |element|
   Ingredient.create(name: element['strIngredient1'])
 end
