@@ -2,7 +2,7 @@
 <div class="container">
   <h1>Add ingredients to your <%= @cocktail.name %> here</h1>
   <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.association :ingredient %>
+    <%= f.association :ingredient, input_html: { class: "select-dropdown" } %>
     <%= f.input :description %>
     <%= f.submit "Add the ingredient", class: "btn-cocktail" %>
   <% end %>
